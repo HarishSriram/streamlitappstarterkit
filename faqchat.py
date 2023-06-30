@@ -33,12 +33,12 @@ st.title('🦜🔗 Eva Can Help')
 # File upload
 uploaded_file = st.file_uploader('Upload the FAQ base', type='csv')
 # Query text
-query_text = st.text_input('Enter your question:', placeholder = 'Please provide a short summary.', disabled=False uploaded_file)
+query_text = st.text_input('Enter your question:', placeholder = 'Please provide a short summary.')
 
 # Form input and query
 result = []
 with st.form('myform', clear_on_submit=True):
-	openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=False (uploaded_file and query_text))
+	openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not (uploaded_file and query_text))
 	submitted = st.form_submit_button('Submit', disabled=not(uploaded_file and query_text))
 	if submitted and openai_api_key.startswith('sk-'):
 		with st.spinner('Calculating...'):
