@@ -10,8 +10,7 @@ from langchain.document_loaders import DataFrameLoader
 def generate_response(uploaded_file, openai_api_key, query_text):
 	# Load document if file is uploaded
 	if uploaded_file is not None:
-		doc = [uploaded_file.read().decode()]
-		df = pd.read_csv(doc)
+		df = pd.read_csv(uploaded_file).decode()
 		loader = DataFrameLoader(df)
 		documents = loader.load()
 		# Split documents into chunks
