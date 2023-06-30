@@ -11,7 +11,7 @@ from langchain.document_loaders import DataFrameLoader
 def generate_response(uploaded_file, openai_api_key, query_text):
 	# Load document if file is uploaded
 	if uploaded_file is not None:
-		loader = CSVLoader(uploaded_file)
+		loader = CSVLoader(file_path='erfr_faq_chatbot.csv')
 		#uploaded_file = uploaded_file.decode()
 		#df = pd.read_csv(uploaded_file)
 		#loader = DataFrameLoader(df)
