@@ -1,1 +1,6 @@
 streamlit
+streamlit
+langchain
+openai
+chromadb
+tiktoken
