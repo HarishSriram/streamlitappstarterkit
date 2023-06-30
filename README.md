@@ -1,4 +1,4 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 Streamlit FAQ Chat
 ```
 ⬆️ (Replace above with your app's name)
 ```
