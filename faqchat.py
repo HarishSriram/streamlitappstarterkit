@@ -5,14 +5,16 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 import pandas as pd
+from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.document_loaders import DataFrameLoader
 
 def generate_response(uploaded_file, openai_api_key, query_text):
 	# Load document if file is uploaded
 	if uploaded_file is not None:
-		uploaded_file = uploaded_file.decode()
-		df = pd.read_csv(uploaded_file)
-		loader = DataFrameLoader(df)
+		loader = CSVLoader(uploaded_file)
+		#uploaded_file = uploaded_file.decode()
+		#df = pd.read_csv(uploaded_file)
+		#loader = DataFrameLoader(df)
 		documents = loader.load()
 		# Split documents into chunks
 		text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
