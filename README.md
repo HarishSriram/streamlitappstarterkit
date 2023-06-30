@@ -1,7 +1,4 @@
 # 📦 Streamlit FAQ Chat
-```
-⬆️ (Replace above with your app's name)
-```
 
 Description of the app ...
 
