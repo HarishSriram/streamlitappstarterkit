@@ -30,8 +30,8 @@ def generate_response(uploaded_file, openai_api_key, query_text):
 		return qa.run(query_text)
 
 # Page title
-st.set_page_config(page_title='Red can help')
-st.title('Red Can Help')
+st.set_page_config(page_title='Red can help you :)')
+st.title('Red Can Help you :)')
 
 # File upload
 uploaded_file = st.file_uploader('Upload the FAQ base', type='csv')
